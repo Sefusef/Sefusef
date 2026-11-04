@@ -1,6 +1,6 @@
 # Welearn & Educational Suite 📚🤖
 
-Welcome to the official repository hub for **Welearn**, founded and developed by **Sefu Rashidi Malogo**. This organization and repository collection bridges pedagogical examination standards with mobile engineering, delivering high-performance tools for students, teachers, and academic authorities.
+Welcome to the official repository hub for **Welearn**, founded and developed by **Seif Rashidi Malogo**. This organization and repository collection bridges pedagogical examination standards with mobile engineering, delivering high-performance tools for students, teachers, and academic authorities.
 
 ---
 
@@ -37,7 +37,7 @@ A hybrid web-and-mobile tool tailored for primary school curriculum developers a
 
 ## 👨‍💻 Author & Maintainer
 
-* **Developer:** Sefu Rashidi Malogo
+* **Developer:** Seif Rashidi Malogo
 * **Organization:** Welearn
 * **Role:** Primary School Curriculum Developer, Examination Authority Specialist, and Android Engineer.
 
