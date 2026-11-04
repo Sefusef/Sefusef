@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sefu Rashidi Malogo | Founder & Lead Developer at Welearn</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f3ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+                    W
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black tracking-tight text-white group-hover:text-indigo-400 transition-colors">Welearn</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-indigo-400 -mt-1">EdTech Solutions</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+                <a href="#solutions" class="hover:text-indigo-400 transition-colors">Software Solutions</a>
+                <a href="#products" class="hover:text-indigo-400 transition-colors">Products</a>
+                <a href="#stack" class="hover:text-indigo-400 transition-colors">Stack</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA & GitHub Links -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://github.com/Sefusef" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 px-4 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+                    <i class="fab fa-github text-base"></i> GitHub
+                </a>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg shadow-indigo-600/30 transition-all">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden text-slate-300 hover:text-white p-2">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-4 pb-6 space-y-4">
+            <a href="#about" class="block text-slate-300 hover:text-indigo-400 font-medium text-sm">About</a>
+            <a href="#solutions" class="block text-slate-300 hover:text-indigo-400 font-medium text-sm">Software Solutions</a>
+            <a href="#products" class="block text-slate-300 hover:text-indigo-400 font-medium text-sm">Products</a>
+            <a href="#stack" class="block text-slate-300 hover:text-indigo-400 font-medium text-sm">Stack</a>
+            <a href="#contact" class="block text-slate-300 hover:text-indigo-400 font-medium text-sm">Contact</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="https://github.com/Sefusef" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-slate-800 text-slate-200 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider">
+                    GitHub Profile
+                </a>
+                <a href="#contact" class="w-full text-center bg-indigo-600 text-white py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-20 pb-28 md:pt-32 md:pb-36 bg-slate-950">
+        <!-- Glow accents -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-indigo-600/15 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center space-y-8">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-indigo-950/80 border border-indigo-800/50 text-indigo-300 shadow-inner">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Founder & Lead Developer @ Welearn
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-tight">
+                    Sefu Rashidi <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400">Malogo</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-xl sm:text-2xl font-semibold text-slate-300 tracking-tight">
+                    Bridging Educational Pedagogy & Mobile Engineering
+                </p>
+
+                <!-- Bio -->
+                <p class="text-base sm:text-lg text-slate-400 leading-relaxed font-normal max-w-2xl mx-auto">
+                    Primary School Curriculum Specialist, Examination Authority Specialist, and Lead Android Engineer crafting software applications like <strong class="text-indigo-400">Wonderz Learn</strong>, <strong class="text-purple-400">TimePro</strong>, and AI academic engines.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                    <a href="#products" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
+                        <span>Explore Applications</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#about" class="bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-bold px-8 py-4 rounded-2xl transition-all flex items-center justify-center">
+                        Our Mission
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Mission Section -->
+    <section id="about" class="py-24 bg-slate-900/60 border-y border-slate-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Column Text -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-indigo-400">
+                        <i class="fas fa-compass text-indigo-500"></i> About Welearn
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight leading-snug">
+                        Transforming Education with Purpose-Built Technology
+                    </h2>
+                    <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+                        At <strong class="text-slate-200">Welearn</strong>, founded by <strong class="text-slate-200">Sefu Rashidi Malogo</strong>, we marry domain expertise in primary school curriculum design and national examination frameworks with cutting-edge mobile, web, and AI development.
+                    </p>
+                    <p class="text-slate-400 text-base leading-relaxed">
+                        Our suite spans interactive student learning apps like <strong>Wonderz Learn</strong> (with embedded code execution and chat rooms), NECTA-compliant lesson planning tools, school timetables, and multimodal exam evaluation.
+                    </p>
+                    
+                    <div class="pt-4 grid grid-cols-2 gap-4">
+                        <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                            <div class="text-2xl font-black text-indigo-400">100%</div>
+                            <div class="text-xs text-slate-400 font-medium mt-1">Curriculum Aligned</div>
+                        </div>
+                        <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                            <div class="text-2xl font-black text-cyan-400">Interactive</div>
+                            <div class="text-xs text-slate-400 font-medium mt-1">Mobile Python & AI Assistant</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column Visual Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 shadow-xl space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-950 text-pink-400 flex items-center justify-center text-xl">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Wonderz Learn</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Mobile student portal with notes, video tutorials, live coding environments, and student AI chat.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 shadow-xl space-y-3 sm:translate-y-6">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-950 text-cyan-400 flex items-center justify-center text-xl">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Mobile Architecture</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Robust native Kotlin Android apps and hybrid web bridges designed for low-latency, offline availability.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 shadow-xl space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-950 text-purple-400 flex items-center justify-center text-xl">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">AI-Powered Assisting</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Integrating multi-modal LLM reasoning for exam evaluation, step-by-step tutoring, and code parsing.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 shadow-xl space-y-3 sm:translate-y-6">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-950 text-emerald-400 flex items-center justify-center text-xl">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Automated TimePro</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Intelligent background scheduling engines and exact alarm managers tailored specifically for active school days.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Solutions / Core Competencies Section -->
+    <section id="solutions" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-400">Core Expertise</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">Solutions Built for Modern Education</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Targeted technological solutions engineered to resolve complex academic administrative & student learning friction points.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Capability 1 -->
+                <div class="bg-slate-900/50 p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition-all hover:shadow-2xl hover:shadow-indigo-500/10 group">
+                    <div class="w-12 h-12 bg-pink-950/80 border border-pink-800/50 text-pink-400 rounded-2xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Student Mobile Portals</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Interactive platforms delivering academic notes, video courses, mobile coding compilers, and peer chat rooms.
+                    </p>
+                </div>
+
+                <!-- Capability 2 -->
+                <div class="bg-slate-900/50 p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition-all hover:shadow-2xl hover:shadow-indigo-500/10 group">
+                    <div class="w-12 h-12 bg-indigo-950/80 border border-indigo-800/50 text-indigo-400 rounded-2xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Academic Timetabling</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Custom algorithms for collision-free timetable generation, lesson period tracking, and silent mode toggles.
+                    </p>
+                </div>
+
+                <!-- Capability 3 -->
+                <div class="bg-slate-900/50 p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition-all hover:shadow-2xl hover:shadow-indigo-500/10 group">
+                    <div class="w-12 h-12 bg-purple-950/80 border border-purple-800/50 text-purple-400 rounded-2xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Lesson Plan Engines</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Automated NECTA-aligned document generators building structured schemes, lesson plans, and register formats.
+                    </p>
+                </div>
+
+                <!-- Capability 4 -->
+                <div class="bg-slate-900/50 p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition-all hover:shadow-2xl hover:shadow-indigo-500/10 group">
+                    <div class="w-12 h-12 bg-cyan-950/80 border border-cyan-800/50 text-cyan-400 rounded-2xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Broadsheet & Vision AI</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Computer vision integration to scan paper score sheets, parse Excel registers, and extract statistical analytical reports.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Products Section -->
+    <section id="products" class="py-24 bg-slate-900/40 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-400">Featured Software</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">Welearn Product Portfolio</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Explore flagship applications designed and engineered by Sefu Rashidi Malogo.</p>
+            </div>
+
+            <div class="space-y-12">
+                
+                <!-- Product 1: Wonderz Learn (FEATURED FLAGSHIP PRODUCT) -->
+                <div class="bg-gradient-to-b from-slate-900 to-slate-950 rounded-3xl border border-pink-500/30 p-8 lg:p-12 overflow-hidden relative shadow-2xl ring-1 ring-pink-500/20">
+                    <div class="absolute top-0 right-0 bg-gradient-to-l from-pink-600 to-purple-600 text-white font-extrabold text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-bl-2xl shadow-md">
+                        Flagship Student App
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-pink-950/80 text-pink-300 border border-pink-800/50">
+                                <i class="fas fa-mobile-alt"></i> Mobile Academic & Coding Assistant
+                            </div>
+                            <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight flex items-center gap-3">
+                                <span>Wonderz Learn</span>
+                            </h3>
+                            <p class="text-slate-300 text-base leading-relaxed">
+                                An all-in-one mobile educational companion built for students and aspiring coders. Features a multi-tab interface offering free academic notes (Computer Fundamentals, Science, Economics), integrated video classes, an interactive student/AI chat room with formatted code sharing, and a mobile Python script compiler.
+                            </p>
+                            
+                            <!-- Feature Pills -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs font-semibold text-slate-300">
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-book-open text-pink-400"></i> Free Notes
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-play-circle text-purple-400"></i> Video Lessons
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-comments text-cyan-400"></i> Code Chat Room
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-terminal text-emerald-400"></i> Python Editor
+                                </div>
+                            </div>
+
+                            <div class="pt-2 flex items-center gap-4">
+                                <a href="https://github.com/Sefusef" target="_blank" rel="noopener noreferrer" class="bg-pink-600 hover:bg-pink-500 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg shadow-pink-600/20">
+                                    <i class="fab fa-github text-sm"></i> View Repository
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Technical App Mockup Card -->
+                        <div class="lg:col-span-5 bg-slate-950 p-6 sm:p-7 rounded-2xl border border-slate-800 space-y-4 shadow-inner">
+                            <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+                                <span class="text-xs font-black text-pink-400 uppercase tracking-wider"><i class="fas fa-mobile text-sm mr-1"></i> Wonderz Learn Modules</span>
+                                <span class="text-[10px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded-full border border-slate-800">v2.4 Active</span>
+                            </div>
+
+                            <!-- Screen Highlights derived from screenshots -->
+                            <div class="space-y-3">
+                                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-xs">
+                                    <div class="font-bold text-white mb-1 flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-pink-500"></span> Free Academic & Coding Notes
+                                    </div>
+                                    <p class="text-slate-400 text-[11px] leading-snug">Structured modules covering Computer Fundamentals (hardware, software, user roles, data processing), physics, economics, and mathematics.</p>
+                                </div>
+
+                                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-xs">
+                                    <div class="font-bold text-white mb-1 flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-purple-500"></span> Class Videos Hub
+                                    </div>
+                                    <p class="text-slate-400 text-[11px] leading-snug">Embedded video courses for Microsoft Word, Excel for Beginners, Python Programming, and ICT tools for students and teachers.</p>
+                                </div>
+
+                                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-xs">
+                                    <div class="font-bold text-white mb-1 flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-cyan-500"></span> Live Peer & AI Code Chat
+                                    </div>
+                                    <p class="text-slate-400 text-[11px] leading-snug">Public & private chat rooms allowing students to copy/paste code snippets (<code class="text-emerald-300 font-mono">print("Hello python")</code>) and collaborate real-time.</p>
+                                </div>
+
+                                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-xs">
+                                    <div class="font-bold text-white mb-1 flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Integrated Python Mobile IDE
+                                    </div>
+                                    <p class="text-slate-400 text-[11px] leading-snug">In-app code editor & console output allowing interactive script execution (<code class="text-emerald-300 font-mono">input() / print()</code>) right on mobile devices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: TimePro -->
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 p-8 lg:p-12 overflow-hidden relative shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-950 text-indigo-400 border border-indigo-800/50">
+                                <i class="fab fa-android"></i> Android Native Application
+                            </div>
+                            <h3 class="text-3xl font-black text-white tracking-tight">TimePro</h3>
+                            <p class="text-slate-300 text-base leading-relaxed">
+                                A flagship school timetable and time-management companion built with high precision. TimePro allows educators and pupils to organize class schedules with exact Android alarm scheduling, custom silent student modes, expandable lesson lists, and native home screen widgets.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-medium text-slate-300">
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-bell text-indigo-400"></i> Exact Alarms
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-volume-mute text-indigo-400"></i> Silent Modes
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-th-large text-indigo-400"></i> Home Widgets
+                                </div>
+                            </div>
+
+                            <div class="pt-2 flex items-center gap-4">
+                                <a href="https://github.com/Sefusef/TimePro" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg shadow-indigo-600/20">
+                                    <i class="fab fa-github text-sm"></i> View Repository
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Technical Card Highlight -->
+                        <div class="lg:col-span-5 bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+                            <h4 class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Technical Highlights</h4>
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Built with <strong>Kotlin & Native Java</strong> using Room/SQLite local persistent store.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Implements <strong>AlarmManager</strong> background job triggers for reliable bell notifications.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Integrated <strong>Google AdMob SDK</strong> monetization and interactive custom UI components.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Lesson Plan Generator -->
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 p-8 lg:p-12 overflow-hidden relative shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-purple-950 text-purple-400 border border-purple-800/50">
+                                <i class="fas fa-file-alt"></i> Web & Hybrid Tool
+                            </div>
+                            <h3 class="text-3xl font-black text-white tracking-tight">Lesson Plan Generator</h3>
+                            <p class="text-slate-300 text-base leading-relaxed">
+                                A dedicated pedagogical solution crafted specifically for primary school teachers. Simplifies the creation of standardized NECTA-compliant lesson plans, class registers, and examination templates with instant print and file export capabilities.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-medium text-slate-300">
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-check text-purple-400"></i> NECTA Aligned
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-print text-purple-400"></i> Print Ready
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-users text-purple-400"></i> Class Registers
+                                </div>
+                            </div>
+
+                            <div class="pt-2 flex items-center gap-4">
+                                <a href="https://github.com/Sefusef/Welearn" target="_blank" rel="noopener noreferrer" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg shadow-purple-600/20">
+                                    <i class="fab fa-github text-sm"></i> View Repository
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Technical Card Highlight -->
+                        <div class="lg:col-span-5 bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+                            <h4 class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Technical Highlights</h4>
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Engineered with <strong>WebView JavaScript Bridge</strong> for cross-platform Android integration.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Modular <strong>HTML5 / CSS / JavaScript</strong> template architecture for print layout fidelity.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Client-side data caching ensuring complete offline availability for rural teachers.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Smart Solver & AI Exam Engine -->
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 p-8 lg:p-12 overflow-hidden relative shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-cyan-950 text-cyan-400 border border-cyan-800/50">
+                                <i class="fas fa-brain"></i> AI Academic Engine
+                            </div>
+                            <h3 class="text-3xl font-black text-white tracking-tight">Smart Solver & AI Exam Engine</h3>
+                            <p class="text-slate-300 text-base leading-relaxed">
+                                An intelligent assistant for modern schools. Utilizing optical character recognition and multimodal AI, the engine parses student test papers, analyzes broadsheet Excel registers, generates statistical reports, and provides step-by-step academic explanations.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-medium text-slate-300">
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-camera text-cyan-400"></i> Vision OCR
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-file-excel text-cyan-400"></i> Broadsheet Analysis
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                                    <i class="fas fa-lightbulb text-cyan-400"></i> AI Tutoring
+                                </div>
+                            </div>
+
+                            <div class="pt-2 flex items-center gap-4">
+                                <a href="https://github.com/Sefusef/Welearn" target="_blank" rel="noopener noreferrer" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg shadow-cyan-600/20">
+                                    <i class="fab fa-github text-sm"></i> View Repository
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Technical Card Highlight -->
+                        <div class="lg:col-span-5 bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+                            <h4 class="text-xs font-extrabold uppercase tracking-widest text-slate-400">Technical Highlights</h4>
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Powered by <strong>Google Gemini AI API</strong> for natural multimodal parsing & reasoning.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Uses <strong>SheetJS (XLSX)</strong> for high-speed client-side spreadsheet generation and grading.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Custom prompt engineering tailored for national examination scoring matrices.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack & Tools Section -->
+    <section id="stack" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-400">Development Environment</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">Technical Expertise & Stack</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Technologies and frameworks utilized across Welearn software engineering projects.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Stack Item 1 -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex items-center gap-4 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-950 text-emerald-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Android SDK</h4>
+                        <p class="text-xs text-slate-400">Native Mobile Eng.</p>
+                    </div>
+                </div>
+
+                <!-- Stack Item 2 -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex items-center gap-4 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-950 text-indigo-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Kotlin</h4>
+                        <p class="text-xs text-slate-400">Primary Mobile Language</p>
+                    </div>
+                </div>
+
+                <!-- Stack Item 3 -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex items-center gap-4 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-950 text-yellow-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Python Engine</h4>
+                        <p class="text-xs text-slate-400">In-App Compiler Support</p>
+                    </div>
+                </div>
+
+                <!-- Stack Item 4 -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex items-center gap-4 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Gemini API</h4>
+                        <p class="text-xs text-slate-400">Multimodal AI Engine</p>
+                    </div>
+                </div>
+
+                <!-- Stack Item 5 -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex items-center gap-4 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950 text-blue-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Gradle</h4>
+                        <p class="text-xs text-slate-400">Build System</p>
+                    </div>
+                </div>
+
+                <!-- Stack Item 6 -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex items-center gap-4 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-purple-950 text-purple-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">WebView JS Bridge</h4>
+                        <p class="text-xs text-slate-400">Hybrid Integration</p>
+                    </div>
+                </div>
+
+                <!-- Stack Item 7 -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex items-center gap-4 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-green-950 text-green-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">SheetJS</h4>
+                        <p class="text-xs text-slate-400">Broadsheet Processing</p>
+                    </div>
+                </div>
+
+                <!-- Stack Item 8 -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex items-center gap-4 hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-sky-950 text-sky-400 flex items-center justify-center text-2xl font-bold">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Tailwind CSS</h4>
+                        <p class="text-xs text-slate-400">Modern Responsive Styling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Outreach Section -->
+    <section id="contact" class="py-24 bg-slate-900/80 border-t border-slate-800 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-14 shadow-2xl relative overflow-hidden text-center space-y-8">
+                <!-- Decorative Glow -->
+                <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="space-y-3">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-400">Collaboration & Inquiries</span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">Let's Build Educational Future Together</h2>
+                    <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
+                        Whether you are an educational institution, developer, or organization looking to integrate tools like Wonderz Learn, TimePro, or AI engines, we'd love to connect.
+                    </p>
+                </div>
+
+                <!-- Contact Info Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col items-center justify-center space-y-2">
+                        <i class="fas fa-building text-2xl text-indigo-400"></i>
+                        <span class="text-xs text-slate-400 uppercase font-bold tracking-wider">Company</span>
+                        <span class="text-white font-bold text-base">Welearn Solutions</span>
+                    </div>
+
+                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col items-center justify-center space-y-2">
+                        <i class="fas fa-user-tie text-2xl text-cyan-400"></i>
+                        <span class="text-xs text-slate-400 uppercase font-bold tracking-wider">Lead Developer</span>
+                        <span class="text-white font-bold text-base">Sefu Rashidi Malogo</span>
+                    </div>
+                </div>
+
+                <!-- External Action Links -->
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://github.com/Sefusef" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold px-8 py-4 rounded-2xl transition-all flex items-center justify-center gap-3">
+                        <i class="fab fa-github text-xl"></i>
+                        <span>Explore GitHub Repositories</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-900 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+            <div class="flex justify-center items-center gap-2 text-slate-300 font-extrabold text-sm">
+                <span>Welearn</span>
+                <span>•</span>
+                <span>Sefu Rashidi Malogo</span>
+            </div>
+            <p>&copy; 2026 Welearn. All rights reserved. Primary School Curriculum & Educational Technology Engineering.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu on nav link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
